@@ -36,10 +36,13 @@ public class Simulator {
         exitCarQueue = new CarQueue();
         simulatorView = new SimulatorView(3, 6, 30);
     }
-    public void main()
+    
+    public static void main(String[] args)
     {
-    run();
+    	Simulator mySim = new Simulator();
+    	mySim.run();
     }
+    
     public void run() {
         for (int i = 0; i < 10000; i++) {
             tick();

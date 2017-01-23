@@ -1,7 +1,14 @@
 package Parkeersimulator;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class SimulatorView extends JFrame {
     private CarParkView carParkView;
