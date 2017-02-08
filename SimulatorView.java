@@ -1,4 +1,4 @@
-package Parkeersimulator;
+package parkeersimulator;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
+//hi
 public class SimulatorView extends JFrame {
     private CarParkView carParkView;
     private int numberOfFloors;
