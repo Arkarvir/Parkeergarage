@@ -10,7 +10,8 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class SimulatorView extends JFrame {
+public class SimulatorView extends JFrame 
+{
     private CarParkView carParkView;
     private int numberOfFloors;
     private int numberOfRows;
