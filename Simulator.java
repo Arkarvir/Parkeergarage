@@ -28,7 +28,10 @@ public class Simulator {
     int enterSpeed = 3; // number of cars that can enter per minute
     int paymentSpeed = 7; // number of cars that can pay per minute
     int exitSpeed = 5; // number of cars that can leave per minute
-
+    
+    public int aantalTicks = 0;
+    
+    
     public Simulator() {
         entranceCarQueue = new CarQueue();
         entrancePassQueue = new CarQueue();
@@ -44,11 +47,15 @@ public class Simulator {
     }
     
     public void run() {
-        for (int i = 0; i < 10000; i++) {
+    	for (int i = 0; i < 10000; i++) {
+    		this.aantalTicks = i;
             tick();
         }
+        
     }
-
+    public void stop() {
+    	run() = false;
+    }
     private void tick() {
     	advanceTime();
     	handleExit();
@@ -61,7 +68,7 @@ public class Simulator {
         }
     	handleEntrance();
     }
-
+    
     private void advanceTime(){
         // Advance the time by one minute.
         minute++;
@@ -78,7 +85,18 @@ public class Simulator {
         }
 
     }
-
+    
+    public int getAantalTicks() {
+    	return aantalTicks;
+    }
+    
+    public void setAantalTicks(int ticks) {
+    	if(aantalTicks >= 0 && aantalTicks < 10000) {
+    		this.aantalTicks= ticks;
+    	}
+    }
+    	
+    
     private void handleEntrance(){
     	carsArriving();
     	carsEntering(entrancePassQueue);
